@@ -13,7 +13,7 @@ logger = logging.getLogger(__name__)
 
 # словарь с голосами
 votes = {}
-vote_threshold = 2  # количество голосов для бана
+vote_threshold = 5  # количество голосов для бана, я бы сделал больше
 
 
 # типикал старт
@@ -70,7 +70,6 @@ async def vote_for_ban(update: Update, context: CallbackContext) -> None:
 
 
 def main():
-    # Замените 'YOUR_TOKEN_HERE' на ваш токен бота
     application = Application.builder().token("сюда ткнуть полученный токен для бота").build()
 
     application.add_handler(CommandHandler("start", start))
